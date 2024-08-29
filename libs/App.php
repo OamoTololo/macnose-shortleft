@@ -21,6 +21,34 @@ class App
             echo "Connected successfully";
         }
     }
+    public function selectAll($query)
+    {
+        $statement = $this->link->query($query);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_OBJ);
+
+        if ($result) {
+            return $result;
+        } else {
+            return null;
+        }
+    }
+    public function selectOne($query)
+    {
+        $statement = $this->link->query($query);
+        $statement->execute();
+        $result = $statement->fetch(PDO::FETCH_OBJ);
+
+        if ($result) {
+            return $result;
+        } else {
+            return null;
+        }
+    }
+    public function disconnect()
+    {
+        $this->link = null;
+    }
 }
 
 $obj = new App;
