@@ -120,7 +120,18 @@ class App
                 header("Location:" . $path);
             }
         }
-
+    }
+    // Starting session
+    public function userSession()
+    {
+        session_start();
+    }
+    // Validating sessions
+    public function sessionValidation($path)
+    {
+        if (isset($_SESSION['id'])) {
+            header("Location:" . $path);
+        }
     }
     public function disconnect()
     {
