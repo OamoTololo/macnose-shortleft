@@ -92,6 +92,36 @@ class App
             return true;
         }
     }
+    public function register($query, $array, $path)
+    {
+        if ($this->validate($array) == "Empty") {
+            echo "<script>alert('One or more inputs are empty!')</script>";
+        } else {
+            $registerUser = $this->link->prepare($query);
+            $registerUser->execute($array);
+
+            header("Location:" . $path);
+        }
+    }
+
+    public function login($query, $data, $path)
+    {
+        // Validating email
+        $loginUser = $this->link->prepare($query);
+        $loginUser->execute();
+
+        $fetch = $loginUser->fetch(PDO::FETCH_OBJ);
+
+        if ($fetch->rowCount() == 1) {
+            // Validate password
+            if (password_verify($data["password"], $fetch->password)) {
+                // Start session
+
+                header("Location:" . $path);
+            }
+        }
+
+    }
     public function disconnect()
     {
         $this->link = null;
