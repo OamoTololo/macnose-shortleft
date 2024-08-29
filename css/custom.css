@@ -1,0 +1,379 @@
+/* Box sizing rules */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class], ol[class] {
+    padding: 0;
+}
+
+/* Remove default margin */
+h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class], ol[class] {
+    list-style: none;
+}
+
+/* a elements that don't have a class get a default style */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Making images easier to work with */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+    margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* Removing all animations and transitions */
+@media {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+}
+
+/* */
+
+/**/
+/**/
+
+/**/
+/**/
+
+/**/
+
+
+/* Login and Register pages */
+.loginHeader {
+    text-align: center;
+}
+
+.loginHeader h1 {
+    font-size: 60px;
+    padding: 0;
+    font-style: italic;
+}
+
+.loginHeader p {
+    font-size: 50px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.loginHeader p:after {
+    content: '';
+    display: block;
+    height: 5px;
+    background: sandybrown;
+    margin: 0 auto;
+}
+
+.loginText {
+    font-style: italic;
+}
+
+.loginBody form{
+    margin: 0 auto;
+    width: 450px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 50px;
+    border: 2px solid maroon;
+    border-radius: 20px;
+}
+
+.loginBody h4 {
+    font-size: 40px;
+    padding: 0;
+}
+
+.loginBody input {
+    text-transform: uppercase;
+    height: 45px;
+    width: 100%;
+    border: 2px solid maroon;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.loginBody, .registerBody {
+    background: url("../images/login-background.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.loginButton button {
+    font-size: 20px;
+    padding: 8px 18px;
+    border-radius: 10px;
+    border: none;
+    color: sandybrown;
+}
+
+/* Home page */
+
+/*.homepageHeader {*/
+/*    width: 100%;*/
+/*    height: 20px;*/
+/*    background: sandybrown;*/
+/*}*/
+.homepageBanner {
+    background: url("../images/homepagebanner.jpg") no-repeat center center fixed;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    height: 100vh;
+}
+
+.homepageContainer {
+    width: 100%;
+    max-width: 1000px;
+    /*height: 55vh;*/
+    margin: 0 auto;
+}
+.homepageHeader {
+    width: 100%;
+    background: sandybrown;
+}
+.bannerHeader h1 {
+    font-size: 100px;
+    color: black;
+    font-style: italic;
+    line-height: 100%;
+}
+.bannerHeader h4 {
+    font-size: 40px;
+    color: black;
+    text-transform: uppercase;
+    font-style: italic;
+    line-height: 100%;
+}
+.bannerTagline {
+    margin-top: 40px;
+    font-size: 20px;
+    color: white;
+}
+
+.bannerIcons {
+    margin-top: 190px;
+}
+.bannerIcons a {
+    font-size: 25px;
+    margin-left: 40px;
+    padding: 7px 15px;
+    background: rgba(0, 128, 128,  0.5);
+    color: sandybrown;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+}
+.bannerIcons a:first-child {
+    margin-left: 0;
+}
+.bannerIcons a:hover {
+    color: teal;
+    background: sandybrown;
+    font-size: 25px;
+    transition: .5s all;
+}
+.indexBody {
+    font-family: Arial, sans-serif;
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.homepageFeatures {
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+}
+.homepageFeature {
+    padding: 10px 20px;
+    text-align: center;
+    width: 33.33%;
+}
+.homepageFeature:hover {
+    border-top: 2px solid sandybrown;
+    border-bottom: 2px solid sandybrown;
+    transition: 0.5s all;
+}
+.homepageFeature .featureIcon {
+    height: 80px;
+    width: 80px;
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 55px;
+    background: sandybrown;
+    color: white;
+    margin-bottom: 20px;
+}
+.homepageFeature .featureTitle {
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+.homepageFeature .featureDescription {
+    color: black;
+    font-size: 18px;
+}
+
+.homepageNotified {
+    background: #e3e3e3;
+    padding: 80px 0;
+}
+.homepageNotifiedContainer {
+    display: flex;
+    flex-direction: row;
+}
+.emailForm {
+    width: 40%;
+}
+.emailForm h3 {
+    font-size: 23px;
+}
+.video {
+    width: 50%;
+    text-align: center;
+}
+.homepageNotified h3 {
+    margin-bottom: 20px;
+}
+.homepageNotified p {
+    color: black;
+    line-height: 200%;
+    margin-bottom: 30px;
+}
+.formContainer {
+    width: 80%;
+    position: relative;
+}
+.formContainer input {
+    width: 100%;
+    padding: 10px 5px;
+    border-radius: 15px;
+    border: none;
+}
+.formContainer input:focus {
+    outline: none;
+}
+.formContainer button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    font-size: 22px;
+    padding: 0 10px;
+    border: none;
+    color: white;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+iframe {
+    width: 80%;
+    height: 120%;
+}
+.socials {
+    text-align: center;
+    padding: 70px 0 40px 0;
+}
+.socialsHeader {
+    font-size: 30px;
+}
+.socialText {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    color: grey;
+    font-size: 20px;
+}
+.socialsContainer a {
+    font-size: 23px;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    padding-top: 7px;
+    border-radius: 50%;
+    background: teal;
+    color: sandybrown;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.socialsContainer a:hover {
+    background: sandybrown;
+    color: teal;
+    transition: 0.3s all;
+}
+.footer {
+    background: #e3e3e3;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.footer a {
+    color: grey;
+    margin-left: 30px;
+    text-decoration: none;
+}
+.footer a:hover {
+    font-weight: bold;
+    color: sandybrown;
+    transition: 0.5s;
+}
+
+/* Navbar */
+.navBody {
+    background-position: center;
+    background-size: cover;
+}
+.nav-link a {
+    color: grey;
+    margin-left: 30px;
+    text-decoration: none;
+}
+.nav-link a:hover {
+    font-weight: bold;
+    color: sandybrown;
+    transition: 0.5s;
+}
+/* colors */
+.maroon {
+    color: maroon;
+}
+.brown {
+    color: sandybrown;
+}
+.black {
+    color: black;
+}
+.btn-brown {
+    background-color: sandybrown;
+}
+.btn-maroon {
+    background-color: maroon;
+}
+
+
+/* start of index page */
+
+/* end of index page */
+
+/* start of navbar */
+    /* start of login-user*/
+
+    /* end of login-user*/
+/* end of navbar*/
